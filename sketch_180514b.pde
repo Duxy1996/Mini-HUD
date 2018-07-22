@@ -58,6 +58,15 @@ float[] reciver(float pitch, float roll)
   formatedPoints[0] = map(pitch,0,90,0,height);
   formatedPoints[1] = height/2-distanceYRight;
   formatedPoints[2] = height/2+distanceYRight;
+  println(halfAngle);
+  if (halfAngle > 0) 
+  {
+     println("Pineto derecha");
+  }
+  else 
+  {
+     println("Pineto izquierda");
+  }
   return formatedPoints;
 }
 
@@ -77,7 +86,7 @@ void paintRestOfPixels()
         }
         if(thereIsBlack) 
         {
-          pixels[loc] = color(222,184,135);
+          //pixels[loc] = color(222,184,135);
         }              
     }
   }
