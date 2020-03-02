@@ -61,7 +61,14 @@ float[] reciver(float pitch, float roll)
   println(halfAngle);
   if (halfAngle > 0) 
   {
-     println("Pineto derecha");
+     color pink = color(255, 102, 204);
+     loadPixels();
+     for (int i = (width-1)*10; i < (width*height); i = i + width)
+     {
+        for (int j = 0; j < 10; j++)
+          pixels[i-j] = pink;
+     }
+     updatePixels();
   }
   else 
   {
